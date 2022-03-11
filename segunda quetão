@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <locale.h>
+
+float segundos(float h, float m, float s) {
+		float minuto,calculo,hora;
+		calculo=(s+(m*60)+(h*60*60));
+		return calculo;
+	}
+
+int main () {
+	
+	setlocale(LC_ALL, "Portuguese");
+	
+	float h,m,s;
+	
+	printf("\nEscreva a hora, o(s) minuto(s) e o(s) segundo(s): \n");
+	scanf("%f%f%f",&h,&m,&s);
+	
+	printf("\nO total de segundos são: %f",segundos(h,m,s));
+}
